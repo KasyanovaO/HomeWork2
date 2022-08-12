@@ -8,8 +8,15 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Введите число ");
-        string numbers = Console.ReadLine();
-        Console.WriteLine("третья цифра этого числа = ");
-        Console.WriteLine($"{numbers[2]}");
+        int numbers = Convert.ToInt32(Console.ReadLine());
+        if (numbers < 100)
+        {
+            Console.WriteLine("третьей цифры нет");
+        }
+        else
+        {
+            Console.WriteLine("третья цифра этого числа = ");
+            Console.WriteLine(numbers.ToString()[2]);
+        }
     }
 }
